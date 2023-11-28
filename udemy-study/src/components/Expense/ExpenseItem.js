@@ -3,6 +3,10 @@ import "./ExpenseItem.css";
 import Card from "./Card";
 
 function ExpenseItem(props) {
+  const clickhandler = () => {
+    console.log("dsjkldjlks");
+  };
+
   return (
     <Card className="expense-item">
       <ExpenseDate date={props.date} />
@@ -11,6 +15,7 @@ function ExpenseItem(props) {
         <div className="expense-item__price">{props.amount}</div>
         <div>{props.date.toLocaleString()}</div>
       </div>
+      <button onClick={clickhandler}>Change Title</button>
     </Card>
   );
 }
